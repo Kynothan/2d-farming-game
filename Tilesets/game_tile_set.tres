@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://d1yebxmhocym3"]
+[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://d1yebxmhocym3"]
 
 [ext_resource type="Texture2D" uid="uid://cp3ssf36k2his" path="res://assets/game/tilesets/water.png" id="1_m70i2"]
 [ext_resource type="Texture2D" uid="uid://dil02ccpjlfwl" path="res://assets/game/tilesets/grass.png" id="2_cbdxd"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dcgd50kqs2hrg" path="res://scenes/objets/trees/small_tree.tscn" id="8_4agr7"]
 [ext_resource type="PackedScene" uid="uid://bixlb4wqkgkw" path="res://scenes/objets/trees/large_tree.tscn" id="9_mt8is"]
 [ext_resource type="PackedScene" uid="uid://cxcxfcxqw7mmk" path="res://scenes/objets/rocks/rock.tscn" id="10_o2x3h"]
+[ext_resource type="PackedScene" uid="uid://cxc07cven6mm8" path="res://scenes/objets/trees/Giant_tree.tscn" id="11_skfke"]
+[ext_resource type="Texture2D" uid="uid://ded8owt43ls0h" path="res://assets/game/objects/new_tree.png" id="11_tmfy7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbdxd"]
 texture = ExtResource("1_m70i2")
@@ -590,7 +592,7 @@ texture = ExtResource("4_xwv23")
 5:2/0/y_sort_origin = 3
 5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -2, 6, -2, 6, 3, -6, 3)
 4:2/0 = 0
-4:2/0/y_sort_origin = 5
+4:2/0/y_sort_origin = 4
 4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3, -2, 3, -2, 3, 5, -3, 5)
 3:2/0 = 0
 3:2/0/y_sort_origin = 4
@@ -643,6 +645,14 @@ scenes/3/scene = ExtResource("7_ow828")
 scenes/4/scene = ExtResource("8_4agr7")
 scenes/5/scene = ExtResource("9_mt8is")
 scenes/6/scene = ExtResource("10_o2x3h")
+scenes/7/scene = ExtResource("11_skfke")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_skfke"]
+texture = ExtResource("11_tmfy7")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+0:0/0/y_sort_origin = 19
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.5, 18, -15.5, 28, 16, 27.5, 8.5, 18)
 
 [resource]
 physics_layer_0/collision_layer = 1
@@ -656,3 +666,4 @@ sources/1 = SubResource("TileSetAtlasSource_hu6sp")
 sources/2 = SubResource("TileSetAtlasSource_xwv23")
 sources/3 = SubResource("TileSetAtlasSource_0b0mn")
 sources/4 = SubResource("TileSetScenesCollectionSource_pi5w0")
+sources/6 = SubResource("TileSetAtlasSource_skfke")

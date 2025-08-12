@@ -9,8 +9,8 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ojxuk"]
 resource_local_to_scene = true
 shader = ExtResource("1_ruqau")
-shader_parameter/shake_intensity = 0.0
-shader_parameter/shake_speed = 20.0
+shader_parameter/shake_intensity = 1.0
+shader_parameter/shake_speed = 1.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30yvp"]
 atlas = ExtResource("1_118b3")
