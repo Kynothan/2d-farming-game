@@ -24,18 +24,19 @@ func _on_next_transitions() -> void:
 func _on_enter() -> void:
 	if player.player_direction == Vector2.UP:
 		animated_sprite_2d.play("chopping_back")
-		hit_component_collision_shape.position = Vector2(0, -20);
+		hit_component_collision_shape.position = Vector2(0, -17);
 	elif player.player_direction == Vector2.RIGHT:
 		animated_sprite_2d.play("chopping_right")
 		hit_component_collision_shape.position = Vector2(9, 0);
 	elif player.player_direction == Vector2.DOWN:
 		animated_sprite_2d.play("chopping_front")
-		hit_component_collision_shape.position = Vector2(0, 3);
+		hit_component_collision_shape.position = Vector2(0, 5);
 	elif player.player_direction == Vector2.LEFT:
 		animated_sprite_2d.play("chopping_left")
 		hit_component_collision_shape.position = Vector2(-9, 0);
 	else:
 		animated_sprite_2d.play("chopping_front")	
+		hit_component_collision_shape.position = Vector2(0, 5);
 		
 	hit_component_collision_shape.disabled = false
 

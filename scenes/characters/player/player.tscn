@@ -395,10 +395,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t61fv"]
-radius = 4.0
+radius = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_djydg"]
-radius = 3.16228
+radius = 4.0
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -407,15 +407,15 @@ script = ExtResource("1_6avc5")
 current_tool = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_omk8d")
 animation = &"chopping_front"
 autoplay = "idle_front"
 frame = 1
 frame_progress = 1.0
+offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_t61fv")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
@@ -452,5 +452,6 @@ animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 current_tool = 1
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
+position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_djydg")
 debug_color = Color(0.831584, 0.273447, 0.707528, 0.42)
